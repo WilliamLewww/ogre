@@ -219,6 +219,8 @@ void ProgressiveMeshGenerator::addVertexData(VertexData* vertexData, bool useSha
 	}
 	vbuf->unlock();
 }
+/// Called from OgreQueuedProgressiveMeshGenerator.cpp, so it can not be defined in here.
+#if 0
 template<typename IndexType>
 void ProgressiveMeshGenerator::addIndexDataImpl(IndexType* iPos, const IndexType* iEnd,
                                                 VertexLookupList& lookup,
@@ -256,6 +258,7 @@ void ProgressiveMeshGenerator::addIndexDataImpl(IndexType* iPos, const IndexType
 		addTriangleToEdges(tri);
 	}
 }
+#endif // 0
 
 void ProgressiveMeshGenerator::addIndexData(IndexData* indexData, bool useSharedVertexLookup, unsigned short submeshID)
 {
